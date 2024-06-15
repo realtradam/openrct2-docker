@@ -40,5 +40,8 @@ EXPOSE 11753
 RUN openrct2-cli --version \
  && openrct2-cli scan-objects
 
+# make roles for server
+#RUN
+
 # Done
-ENTRYPOINT ["openrct2-cli"]
+ENTRYPOINT openrct2-cli host "$RCT2MAP" --port 11753 --verbose
